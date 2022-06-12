@@ -10,7 +10,6 @@ const Directory = ({categories}) => {
                     <DirectoryItem key={category.id} category={category}/>
                 ))
             }
-
         </div>
     );
 };
