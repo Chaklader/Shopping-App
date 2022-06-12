@@ -3,16 +3,15 @@ import React, {Fragment, useContext} from 'react';
 import SHOP_DATA from '../../shop-data.json';
 import {CategoriesContext} from "../../context/categories.context";
 import ProductCard from "../../components/product-cart/product-card.component";
-import CategoryPreview from "../categories-preview/categories-preview.component";
+import CategoryPreview from "../../components/category-preview/category-preview.component";
 
 
-import './shop.styles.scss';
-import {Route, Routes} from "react-router-dom";
+// import './categories-preview.styles.scss';
 
 
-const Shop = () => {
+const CategoriesPreview = () => {
 
-    // const {categoriesMap} = useContext(CategoriesContext);
+    const {categoriesMap} = useContext(CategoriesContext);
 
     return (
         // <div className='shop-container'>
@@ -28,18 +27,14 @@ const Shop = () => {
         //         ))}
         // </div>
 
-        // <div className='shop-container'>
-        //     {Object.keys(categoriesMap).map((title) => {
-        //
-        //         const products = categoriesMap[title];
-        //         return <CategoryPreview key={title} title={title} products={products}/>
-        //     })}
-        // </div>
+        <>
+            {Object.keys(categoriesMap).map((title) => {
 
-        <Routes>
-            <Route index element={<CategoryPreview/>}/>
-        </Routes>
+                const products = categoriesMap[title];
+                return <CategoryPreview key={title} title={title} products={products}/>
+            })}
+        </>
     );
 };
 
-export default Shop;
+export default CategoriesPreview;
