@@ -3,8 +3,6 @@ import Directory from "../../components/directory/directory.componnet";
 
 const Home = () => {
 
-
-
     return (
 
         <Directory/>

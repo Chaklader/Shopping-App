@@ -15,7 +15,6 @@ export const CategoriesProvider = ({children}) => {
     //     addCollectionAndDocuments('categories', SHOP_DATA);
     // }, [])
 
-
     useEffect(() => {
 
         const getCategoriesMap = async () => {

@@ -10,8 +10,6 @@ import Button, {BUTTON_TYPE_CLASSES} from "../button/button.component";
 
 
 
-
-
 const defaultFormFields = {
     email: '',
     password: '',
@@ -19,7 +17,6 @@ const defaultFormFields = {
 
 
 const SignInForm = () => {
-
 
     const [formFields, setFormFields] = useState(defaultFormFields);
     const {email, password} = formFields;
@@ -31,7 +28,6 @@ const SignInForm = () => {
     const resetFormFields = () => {
         setFormFields(defaultFormFields);
     }
-
 
     const handleSubmit = async (event) => {
 
@@ -67,11 +63,9 @@ const SignInForm = () => {
         }
     }
 
-
     const handleChange = event => {
 
         const {name, value} = event.target;
-
         setFormFields(
             {
                 ...formFields,
@@ -79,7 +73,6 @@ const SignInForm = () => {
             }
         );
     }
-
 
     return (
         <div className="sign-up-container">

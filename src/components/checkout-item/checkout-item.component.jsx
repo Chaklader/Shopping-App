@@ -14,7 +14,6 @@ const CheckoutItem = ({cartItem}) => {
     const removeItemHandler = ()=> removeItemToCart(cartItem);
 
 
-
     return (
         <div className='checkout-item-container'>
             <div className='image-container'>
